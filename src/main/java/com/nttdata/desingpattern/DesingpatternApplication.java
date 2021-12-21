@@ -27,13 +27,12 @@ public class DesingpatternApplication implements CommandLineRunner {
 		System.out.println("******************************************");
 		System.out.println("************PATRON PROTOTYPE**************");
 		Vehiculo coche = new com.nttdata.desingpattern.patterns.prototype.Coche("BMW", 1);
-		Vehiculo moto = new Moto("Yamaha", 1);
+		Vehiculo moto = new Moto("Yamaha", 2);
 
-		ArrayList vehiculos = new ArrayList();
-		for (int i = 0; i<args.length; i++) {
-			Vehiculo v = coche.clone();
-			v.setMarca(args[i]);
-		}
+		Vehiculo v1 = coche.clone();
+		Vehiculo v2 = moto.clone();
+		System.out.println(v1.getMarca());
+		System.out.println(v2.getId());
 		System.out.println("******************************************");
 	}
 }
